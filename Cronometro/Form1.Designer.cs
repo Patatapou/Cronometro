@@ -34,14 +34,16 @@
             button2 = new Button();
             button3 = new Button();
             TIMER = new System.Windows.Forms.Timer(components);
+            label1 = new Label();
             SuspendLayout();
             // 
             // TIEMPO
             // 
             TIEMPO.AutoSize = true;
+            TIEMPO.BackColor = Color.Linen;
             TIEMPO.BorderStyle = BorderStyle.Fixed3D;
             TIEMPO.Font = new Font("Arial", 48F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            TIEMPO.Location = new Point(220, 57);
+            TIEMPO.Location = new Point(224, 166);
             TIEMPO.Name = "TIEMPO";
             TIEMPO.Size = new Size(360, 95);
             TIEMPO.TabIndex = 0;
@@ -49,9 +51,10 @@
             // 
             // button1
             // 
-            button1.Location = new Point(220, 198);
+            button1.Font = new Font("Arial Black", 12F, FontStyle.Bold);
+            button1.Location = new Point(176, 299);
             button1.Name = "button1";
-            button1.Size = new Size(94, 29);
+            button1.Size = new Size(145, 39);
             button1.TabIndex = 1;
             button1.Text = "INICIAR";
             button1.UseVisualStyleBackColor = true;
@@ -59,9 +62,10 @@
             // 
             // button2
             // 
-            button2.Location = new Point(356, 198);
+            button2.Font = new Font("Arial Black", 12F, FontStyle.Bold);
+            button2.Location = new Point(327, 299);
             button2.Name = "button2";
-            button2.Size = new Size(94, 29);
+            button2.Size = new Size(145, 39);
             button2.TabIndex = 2;
             button2.Text = "DETENER";
             button2.UseVisualStyleBackColor = true;
@@ -69,9 +73,10 @@
             // 
             // button3
             // 
-            button3.Location = new Point(486, 198);
+            button3.Font = new Font("Arial Black", 12F, FontStyle.Bold);
+            button3.Location = new Point(478, 299);
             button3.Name = "button3";
-            button3.Size = new Size(94, 29);
+            button3.Size = new Size(145, 39);
             button3.TabIndex = 3;
             button3.Text = "RESETEAR";
             button3.UseVisualStyleBackColor = true;
@@ -82,17 +87,29 @@
             TIMER.Interval = 1000;
             TIMER.Tick += SEGUNDOS_Tick;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Arial Black", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(12, 43);
+            label1.Name = "label1";
+            label1.Size = new Size(756, 85);
+            label1.TabIndex = 4;
+            label1.Text = "CRONOMETRO CHIDO";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackColor = Color.AntiqueWhite;
+            ClientSize = new Size(779, 450);
+            Controls.Add(label1);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(TIEMPO);
             Name = "Form1";
-            Text = "Form1";
+            Text = "CronometroChido";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -104,5 +121,6 @@
         private Button button2;
         private Button button3;
         private System.Windows.Forms.Timer TIMER;
+        private Label label1;
     }
 }
